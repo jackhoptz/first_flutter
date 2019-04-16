@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4hu-E9-9Rp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="fqF-e9-auh">
+            <objects>
+                <viewController restorationIdentifier="main_vc" storyboardIdentifier="main_vc" id="pHV-er-75c" customClass="LoginViewController" customModule="flutter_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jip-8l-Rlp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8cv-Lq-2WL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V5X-ti-J0h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZ3-ko-Hx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-397" y="-443"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="fgg-BG-h4Q">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ODo-e4-wxv" customClass="SecondViewController" customModule="flutter_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sq3-UG-ai0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Se0-fP-gh0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="52O-Ks-ZUN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkd-wf-UwY">
+                                <rect key="frame" x="184.5" y="431.5" width="45" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wkd-wf-UwY" firstAttribute="centerX" secondItem="52O-Ks-ZUN" secondAttribute="centerX" id="2xn-hV-hjj"/>
+                            <constraint firstItem="wkd-wf-UwY" firstAttribute="centerY" secondItem="52O-Ks-ZUN" secondAttribute="centerY" id="kK6-qs-vhk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aam-9P-LzY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KJv-Dm-cJI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="89o-Mw-2dP">
+                            <connections>
+                                <action selector="onBtnDoneClicked:" destination="ODo-e4-wxv" id="9cm-rJ-TvD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtTitle" destination="wkd-wf-UwY" id="7sZ-vG-7XV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbK-4K-D0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="-443"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GpN-PD-MFe">
+            <objects>
+                <navigationController id="4hu-E9-9Rp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wPf-3i-gxk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pHV-er-75c" kind="relationship" relationship="rootViewController" id="1ci-Y4-VK1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdp-pf-Fil" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1277" y="-442"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,16 @@
+source 'git@gitlab.devops.ukfast.co.uk:app-devs/ukfast-podspecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'flutter_test' do
+	
+	pod 'UKFLayouts'
+	pod 'Alamofire', '~> 4.7'
+	pod 'JGProgressHUD'
+	
+	flutter_application_path = './../my_flutter'
+	eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')), binding)
+
+end
